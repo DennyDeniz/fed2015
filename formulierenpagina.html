@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
 <body>
-<h1>Aanmelden</h1>
-
+    <section>
+    <h1>Aanmelden</h1>
     <p>Bent u geïnteresseerd in samenwerken met CMD Amsterdam? Dat kan!
 Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ooklopen de studenten stage, in het tweede en afstudeerjaar.</p>
 
@@ -15,105 +15,132 @@ Amsterdam.</em>
 
     <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen.
 Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u contact <a href="#">Contact</a> met ons opnemen.</p>
+    </section>
 
 <form>
    <fieldset>
     <legend>Contactgegevens</legend>
-     <label>Naam <input type="text"></label>
-     <label>Bedrijf <input type="text"></label>
-     <label>Adres <input type="text"></label>
-     <label>Postcode <input type="text"></label>
-     <label>Plaats <input type="text"></label>
-     <label>Telefoon <input type="text"></label>
-     <label>Email <input type="text"></label>
-    </fieldset>
-</form>
+        <label for="voornaam">Voornaam:</label>
+        <input name="voornaam" type="text" id="voornaam" autofocus>
 
-<form>
+        <label for="achternaam">Achternaam:</label>
+        <input name="achternaam" type="text" id="achternaam">
+
+        <label for="adres">Adres:</label>
+        <input name="adres" id="adres" type="text" placeholder="Straat + huisnummer">
+
+        <label for="pcode">Postcode:</label>
+        <input name="pcode" id="pcode" type="text" placeholder="1234 XX">
+
+        <label for="plaats">Plaats:</label>
+        <input name="plaats" id="plaats" type="text">
+
+        <label for="tel">Telefoon:</label>
+        <input name="tel" id="tel" type="tel">
+
+        <label for="mail">Email:</label>
+        <input name="mail" id="mail" type="email" placeholder="voorbeeld@domein.com">
+    </fieldset>
+
    <fieldset>
     <legend>Ik wil mij aanmelden:</legend>
-<input type="radio" name="project" value="pr">Voor een project
-<input type="radio" name="project" value="st">Als stagebedrijf
+        <label><input name="choice" type="radio">Voor een project</label>
+        <label><input name="choice" type="radio">Als stagebedrijf</label>
     </fieldset>
-</form>
 
 <h2>Project</h2>
-<form>
-   <fieldset>
-     <label>Titel <input type="text"></label>
-     <label>Opdrachtomschrijving <input type="text"></label>
-     <label>Doelgroepomschrijving <input type="text"></label>
-     <label>Doelstelling/ intentie van het project <input type="text"></label>
-     <label>Looptijd <input type="text"></label>
-     <label>Deadline <input type="text"></label>
-    </fieldset>
-</form>
 
-   <form>
+   <fieldset>
+            <label for="titel">Titel:</label>
+            <input name="titel" id="titel" type="text">
+
+            <label for="opdracht">Opdrachtomschrijving:</label>
+            <textarea name="opdracht" id="opdracht"></textarea>
+
+            <label for="doelgroep">Doelgroepomschrijving:</label>
+            <textarea name="doelgroep" id="doelgroep"></textarea>
+
+            <label for="doelstelling">Doelstelling/intentievanhetproject:</label>
+            <textarea name="doelstelling" id="doelstelling"></textarea>
+
+            <label for="start">Startdatum:</label>
+            <input name="start" id="start" type="date">
+
+            <label for="end">Einddatum:</label>
+            <input name="end" id="end" type="date">
+
+            <label for="deadline">Deadline:</label>
+            <input name="deadline" id="deadline" type="date">
+    </fieldset>
+
    <fieldset>
        <legend>Geschikt voor</legend>
-    <input type="radio" name="project" value="pr">eerstejaars studenten
-<input type="radio" name="project" value="pr">tweedejaars studenten
-    <input type="radio" name="project" value="pr">derdejaars studenten
-    <input type="radio" name="project" value="pr">afstudeer studenten
-    <input type="radio" name="project" value="pr">onbekend
-</fieldset>
-        </form>
+                <select name="geschikt">
+                    <option value="Eerstejaars Studenten">Eerstejaars Studenten</option>
+                    <option value="Tweedejaars Studenten">Tweedejaars Studenten</option>
+                    <option value="Derdejaars Studenten">Derdejaars Studenten Studenten</option>
+                    <option value="Afstudeer studenten">Afstudeer Studenten</option>
+                    <option value="Onbekend">Onbekend</option>
+                </select>
 
-<p>Opmerking</p>
-    <textarea name="bericht" rows="5" cols="40"></textarea>
+            <label for="Opmerking">Opmerking:</label>
+            <textarea name="Opmerking" id="Opmerking"></textarea>
+
+        </fieldset>
 
 <h2>Stage</h2>
 
-<form>
+            <fieldset>
+                <label for="geschiktstage">Geschikt voor:</label>
+                <select name="geschiktstage" id="geschiktstage">
+                    <option value="Tweedejaars">Tweedejaars</option>
+                    <option value="Afstudeer studenten">Afstudeer Studenten</option>
+                    <option value="Onbekend">Onbekend</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <label>Hoe lang is de stage?
+                <select name="stageduur">
+                  <option value="10weken">10 weken</option>
+                  <option value="20weken">20 weken</option>
+                </select></label>
+                <label> Begin datum <input type="date" name="begindatum"></label>
+            </fieldset>
+
    <fieldset>
-       <legend>Geschikt voor</legend>
-<input type="radio" name="project" value="st">tweedejaars studenten
-    <input type="radio" name="project" value="st">afstudeer studenten
-    <input type="radio" name="project" value="st">onbekend
+                <label>Beschrijving werkzaamheden: <textarea name="werkzaamheden"></textarea></label>
     </fieldset>
-</form>
 
-<form>
-   <fieldset>
-       <legend>Hoe lang is de stage?</legend>
-<input type="radio" name="project" value="st">10 weken
-    <input type="radio" name="project" value="st">20 weken
-    </fieldset>
-</form>
+                   <fieldset>
+                <label for="stagebedrijf">Beschrijving stagebedrijf: </label>
+                <input type="text" name="stagebedrijf" id="stagebedrijf">
 
-<form>
-    <fieldset>
-<legend>Begin datum</legend>
-  <input type="date">
-    </fieldset>
-</form>
+                <label for="bedrijfnaam">Bedrijfsnaam: </label>
+                <input type="text" name="bedrijfnaam" id="bedrijfnaam">
 
-<form>
-   <fieldset>
-       <legend>Beschrijving werkzaamheden:</legend>
-           <p>Beschrijving stagewerkzaamheden</p>
-                <textarea name="bericht" rows="5" cols="40"></textarea>
-    </fieldset>
-</form>
+                <label for="adresstage">Adres: </label>
+                <input type="text" name="adresstage" id="adresstage">
 
-<form>
-   <fieldset>
-        <legend>Beschrijving stagebedrijf</legend>
-     <label>Bedrijfsnaam <input type="text"></label>
-     <label>Adres <input type="text"></label>
-     <label>Postcode <input type="text"></label>
-     <label>Plaats <input type="text"></label>
-     <label>Sector <input type="text"></label>
-     <label>Core Business <input type="text"></label>
-    </fieldset>
-</form>
+                <label for="postcodestage">Postcode: </label>
+                <input type="text" name="postcodestage" id="postcodestage">
 
-<p>Opmerking</p>
-    <textarea name="bericht" rows="5" cols="40"></textarea>
+                <label for="plaatsstage">Plaats: </label>
+                <input type="text" name="plaatsstage" id="plaatsstage">
+
+                <label for="sectorstage">Sector: </label>
+                <input type="text" name="sectorstage" id="sectorstage">
+
+                <label for="corebusiness">Core Business: </label>
+                <input type="text" name="corebusiness" id="corebusiness">
+                    </fieldset>
+
+                <fieldset>
+                <label>Opmerking: <textarea name="Opmerking"></textarea></label>
+                </fieldset>
 
 <input type="submit" value="Verzenden">
-
+</form>
 </body>
 </html>
 
